@@ -1,0 +1,141 @@
+/* title and main body CSS */
+body {
+	background-color: rgb(23, 165, 39);
+}
+
+.jumbotron {
+	background-color: #990033;
+	opacity: 0.8;
+}
+
+.top-right-fix {
+	position: fixed;
+	top: 1%;
+	right: 1%;
+	z-index: 9999;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.top-right-fix:hover {
+	background-color: #990033;
+	color: rgb(23, 165, 39);
+	width: 12%;
+}
+
+.addgrey {
+	background-color: grey;
+	width: 11%;
+}
+
+.modalcolor {
+	background-color: rgb(202, 249, 221);
+}
+
+.stylish {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Calculator CSS */
+
+#calculator {
+	background-color: #990033;
+	width: 50%;
+	height: 300px;
+	border: 3px solid gray;
+	padding: 3%;
+	border-radius: 10px;
+	margin: 3% auto;
+	box-shadow: 0 0 4px 7px; #ccc
+}
+
+#display {
+	margin-bottom: 10px;
+	height: 30px;
+	width: 13em; /*Mathces the font sizes of the buttons */
+	border: 3px solid green;
+	border-radius: 5%;
+	text-align: right; /* start typing from the right*/
+	font: 30px;
+	box-shadow: 0 0 2px 2px;
+}
+
+.max {
+	width: 100%;
+	border-radius: 30%;
+}
+
+#keys {
+	outline: none; /* get rid of blue outline */
+
+}
+
+
+
+/* MEDIA QUERIES */
+/* 400 < */
+@media screen and (max-width: 420px) {
+		.mobile {
+			font-size: 0.0.1em;
+			width: 30%;
+		}
+		.mobile:hover {
+			width: 40%;
+		}
+		#display {
+					width: 1em;
+				}
+}
+
+
+/* 768 */
+@media screen and (max-width: 767px) {
+		.mobile {
+			font-size: 3px;
+		}
+
+		#calculator {
+			height: 600px;
+		}
+		#display {
+					width: 50%;
+				}
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    button {
+        font-size: 0.9em;
+    }
+
+
+
+		.mobile {
+			font-size: 5px;
+		}
+
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    button {
+        font-size: 1.2em;
+    }
+
+		.mobile {
+			font-size: 10px;
+		}
+
+		#display {
+			width: 10em;
+		}
+
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    button {
+        font-size: 1.3em;
+    }
+}
