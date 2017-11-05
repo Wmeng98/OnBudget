@@ -1,0 +1,299 @@
+/* title and main body CSS */
+* {
+	font-family: "Helvetica";
+}
+body {
+	background-color: rgb(52, 155, 58);
+}
+
+.jumbotron {
+	background-color: #990033;
+	opacity: 0.8;
+	margin-bottom: 0;
+}
+
+.top-right-fix {
+	position: fixed;
+	top: 1%;
+	right: 1%;
+	z-index: 9999;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.top-right-fix:hover {
+	background-color: #990033;
+	color: rgb(23, 165, 39);
+	width: 12%;
+}
+
+.addgrey {
+	background-color: grey;
+	width: 11%;
+}
+
+.modalcolor {
+	background-color: rgb(202, 249, 221);
+}
+
+.stylish {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Calculator CSS */
+
+#calculator {
+	background-color: #990033;
+	width: 50%;
+	height: 300px;
+	border: 3px solid gray;
+	padding: 3%;
+	border-radius: 10px;
+	margin: 3% auto;
+	box-shadow: 0 0 4px 7px;
+}
+
+#display {
+	margin-bottom: 10px;
+	height: 30px;
+	width: 13em; /*Mathces the font sizes of the buttons */
+	border: 3px solid green;
+	border-radius: 5%;
+	text-align: right; /* start typing from the right*/
+	font: 30px;
+	box-shadow: 0 0 2px 2px;
+	padding-right: 3%;
+}
+
+.max {
+	width: 100%;
+	border-radius: 30%;
+}
+
+#keys {
+	outline: none; /* get rid of blue outline */
+
+}
+
+#equals {
+	outline: none;
+}
+/* Reddit threads and other reddit CSS*/
+.reddit {
+	color: #990033;
+	border-radius: 50px;
+	border: 20px solid gold;
+	overflow: hidden;
+}
+
+marquee {
+	padding-top: 2px;
+}
+
+marquee:hover {
+	color: purple;
+}
+
+.gold {
+	color: gold;
+}
+
+.gold:hover {
+	color: purple;
+}
+
+.pad {
+	margin: 0 20px 0 20px;
+}
+
+.h4 {
+	margin: 0;
+}
+/**/
+
+/*CSS for budgeting and focasting section*/
+.widt {
+	width: 80%;
+	margin: 5% auto 0 auto;
+}
+
+.center {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.pills {
+	border-radius: 10px;
+	color: rgb(52, 155, 58);
+	font-weight: bold;
+	background-color:  #990033;
+	border: 10px solid gold;
+	outline: none;
+	line-height: 50px;
+	box-shadow: 5px 5px #990033 inset;
+}
+
+.pills:hover {
+	color: gold;
+}
+
+.pills:active {
+	box-shadow: none;
+	border: none;
+}
+
+.pills:focus {
+	background-color: black;
+	color: rgb(52, 155, 58);
+	box-shadow: 5px 5px black inset;
+}
+
+.col-sm-6 {
+	padding: 0;
+}
+.burgundy {
+	color: #990033;
+	font-weight: bold;
+}
+.pills_form {
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	background-color: green;
+	outline: none;
+	line-height: 20px;
+	border: none;
+}
+.pills_inner {
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	background-color:  #990033;
+	border: 10px solid gold;
+	outline: none;
+	line-height: 20px;
+	box-shadow: 5px 5px #990033 inset;
+}
+
+.pills_inner:hover {
+	color: gold;
+}
+
+.pills_inner:active {
+	box-shadow: none;
+	background-color: black;
+	border: none;
+}
+
+
+.formtext {
+	color: #990033;
+	font-weight: bold;
+}
+
+.outline {
+	border: 1px solid black;
+}
+
+.input {
+	margin-down: 3%;
+}
+
+.formdown {
+	margin-bottom: 5%;
+}
+
+h6.money {
+	color: rgb(0, 255, 93);
+	font-weight: bold;
+}
+
+.link {
+	text-decoration: none;
+	color:darkgreen;
+}
+
+.link:hover {
+	text-decoration: none;
+	color: #990033;
+}
+/**/
+
+
+
+/* MEDIA QUERIES */
+/* 400 < */
+@media screen and (max-width: 420px) {
+		.mobile {
+			font-size: 0.1em;
+			width: 30%;
+		}
+		.mobile:hover {
+			width: 40%;
+		}
+		#display {
+					width: 1em;
+				}
+}
+
+/**/
+
+
+/* 768 */
+@media screen and (max-width: 767px) {
+		.mobile {
+			font-size: 5px;
+		}
+
+		#calculator {
+			height: 600px;
+		}
+		#display {
+					width: 50%;
+				}
+		.shrink {
+			font-size: 15px;
+		}
+
+		.btn {
+			font-size: 10px;
+		}
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    button {
+        font-size: 0.9em;
+    }
+
+
+
+		.mobile {
+			font-size: 5px;
+		}
+
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    button {
+        font-size: 1.2em;
+    }
+
+		.mobile {
+			font-size: 10px;
+		}
+
+		#display {
+			width: 10em;
+		}
+
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    button {
+        font-size: 1.3em;
+    }
+}

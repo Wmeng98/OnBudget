@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>OnBudget web app</title>
+	<!-- relationship important to tell what linking to in this case stylesheet -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../CSS/styles.css">
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-10">
+			</div>
+			<div class="col-2">
+				<button type="button" id="calc" class="btn top-right-fix stylish mobile" data-toggle="modal" data-target="#myModal">CALCULATOR</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron">
+					<h1 class="text-center" style="color: rgb(52, 155, 58); font-family: 'Times New Roman';"><strong>OnBudget</strong></h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- Calculator Modal -->
+		<div class="container">
+  <!-- Trigger the modal with a button -->
+
+
+  <!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modalcolor">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="text-center modal-title " style="color: #990033"><strong>Javacscript Calculator</strong></h4>
+				</div>
+
+				<div class="modal-body modalcolor">
+					<!-- Calculator -->
+
+					<div id="calculator" class="text-center">
+						<form>
+							<div class="row">
+								<div class="col-sm-12">
+									<input type="text" id="display" disabled>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<button value="c" class="max" type="button"  id="keys" onclick='toScreen("c")' class="btn">C</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick="backspace()" class="btn">CE</button>
+
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick="power()" class="btn">x^2</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("+")' class="btn">+</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("9")' class="btn">9</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("8")' class="btn">8</button>
+
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("7")' class="btn">7</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("-")' class="btn">-</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("6")' class="btn">6</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("5")' class="btn">5</button>
+
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("4")' class="btn">4</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("*")' class="btn">*</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("3")' class="btn">3</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("2")' class="btn">2</button>
+
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("1")' class="btn">1</button>
+								</div>
+								<div class="col-sm-3">
+									<button class="max" type="button"  id="keys" onclick='toScreen("/")' class="btn">/</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4">
+									<button class="max" type="button"  id="keys" onclick='toScreen("0")' class="btn">0</button>
+								</div>
+								<div class="col-sm-4">
+									<button class="max" type="button"  id="keys" onclick='toScreen(".")' class="btn">.</button>
+								</div>
+								<div class="col-sm-4">
+									<button class="max" type="button"  id="equals" onclick="equal()" class="btn">=</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+
+
+
+
+
+
+				</div>
+				<div class="modal-footer modalcolor">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+			</div>
+		</div>
+  </div>
+</div>
+
+		<div class="row" style="background-color: rgb(52, 155, 58); font-family: 'Helvetica';">
+			<div class="col-12 h3" style="color: #990033;">
+				<marquee behavior="alternate" class="shrink">Trending personalfinance threads from Reddit</marquee>
+			</div>
+		</div>
+	  <div class="row pad" style="background-color: rgb(52, 155, 58); font-family: 'Helvetica';">
+	    <div  class="col-sm-4 h4  reddit">
+				<a id="link1" target="_blank" href=""><marquee class="gold" id=thread1 scrolldelay=100></marquee></a>
+			</div>
+	    <div class="col-sm-4 h4 reddit">
+				<a id="link2" target="_blank" href=""><marquee class="gold" id=thread2></marquee></a>
+			</div>
+	    <div class="col-sm-4 h4 reddit">
+				<a id="link3" target="_blank"  href=""><marquee class="gold" id=thread3 scrolldelay=200></marquee></a>
+			</div>
+	  </div>
+	</div>
+
+	<!-- Daily and Monthl Forcasting... -->
+
+	<div class="container widt">
+			<div class="row nav nav-pills">
+				<div class="col-sm-6">
+					<a data-toggle="pill" href="#daily"><button class="active pills nav-justified">Daily Budget</button></a>
+				</div>
+				<div class="col-sm-6">
+					<a data-toggle="pill" href="#month"><button class="pills nav-justified">Useful Budgeting Articles</button></a>
+				</div>
+			</div>
+		</div>
+
+	  <div class="tab-content center" class="">
+					<div id="daily" class="tab-pane fade in active">
+						<h3 class="burgundy">Daily Budget</h3>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class=" center-block pills_form">Enter your daily budget amount: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="input1" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budget()" type="button" class="center-block pills_inner">Determine Beginning Budget:</button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamt"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class=" center-block pills_form">Enter End Net Budget Goal: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="inputgoal" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budgetgoal()" type="button" class="center-block pills_inner">Log: </button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamtgoal"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class="pills_form center-block">Food Costs: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="input2" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budget_exp()" type="button" class="center-block pills_inner">Log: </button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamt2"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class="pills_form center-block">Clothing Costs: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="input3" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budget_exp2()" type="button" class="center-block pills_inner">Log: </button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamt3"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class="pills_form center-block">Transportation Costs: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="input4" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budget_exp3()" type="button" class="center-block pills_inner">Log: </button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamt4"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class="pills_form center-block">Other Costs: $</button>
+							</div>
+							<div class="col-sm-3 ">
+								<input class="center-block input formdown" type="number" id="input5" value="0">
+							</div>
+							<div class="col-sm-3 ">
+								<button onclick="budget_exp4()" type="button" class="center-block pills_inner">Log: </button>
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="budgetamt5"></h6>
+							</div>
+						</div>
+						<div class="row ">
+							<div class="col-sm-3 ">
+								<button class="pills_form center-block">Ending Balance: $</button>
+							</div>
+							<div class="col-sm-3 ">
+							</div>
+							<div class="col-sm-3 ">
+							</div>
+							<div class="col-sm-3 ">
+								<h6 class="text-center money" id="net" style="color: gold; font-size: 150%;"></h6>
+							</div>
+						</div>
+<!--Log Goal: my Info -->
+						<div class="row">
+							<div class="col-sm-12">
+								<button onclick="log()" type="button" class="enclose center-block btn btn-info form">Log My Plan</button>
+							</div>
+						</div>
+					</div>
+
+
+<!-- Monthly Forcasting Cash Flows -->
+<!-- Monthly Forcasting Cash Flows -->
+<!-- Monthly Forcasting Cash Flows -->
+					<div id="month" class="tab-pane fade">
+						<h3 class="burgundy">Useful Budgeting Articles</h3>
+						<div class="row ">
+							<div class="col-sm-6 text-center">
+								<a class="link" target="_blank" href="https://www.mymoneycoach.ca/blog/what-are-fixed-savings-variable-costs-expenses-and-learn-to-budget-money.html"><h3>Managing Fixed and Variable Costs</h3></a>
+							</div>
+							<div class="col-sm-6 text-center">
+								<a class="link" target="_blank" href="http://www.investopedia.com/articles/pf/06/budgeting.asp"><h3>The Beauty of Budgeting</h3></a>
+							</div>
+					</div>
+					<div class="row ">
+						<div class="col-sm-6 text-center">
+							<a class="link" target="_blank" href="https://money.usnews.com/money/personal-finance/articles/2013/10/18/8-steps-to-creating-a-personal-budget"><h3>Steps To Creating A Budget</h3></a>
+						</div>
+						<div class="col-sm-6 text-center">
+							<a class="link" target="_blank" href="http://www.greenpath.com/resources-tools/financial-library/money-management/budgeting-101"><h3>Budgeting 101</h3></a>
+						</div>
+				</div>
+				<div class="row ">
+					<div class="col-sm-6 text-center">
+						<a class="link" target="_blank" href="https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/laurashin/2016/02/29/how-to-budget-a-simple-flexible-method-for-everyone/&refURL=https://www.google.ca/&referrer=https://www.google.ca/"><h3>Forbes: How to Budget</h3></a>
+					</div>
+					<div class="col-sm-6 text-center">
+						<a class="link" target="_blank" href="https://studentedge.org/articles/life/saving-budgeting"><h3>Student Budgeting</h3></a>
+					</div>
+			</div>
+
+		</div>
+
+
+
+<script src="../JS/script.js"></script> <!--Render Javascript file last after body is run -->
+</body>
+
+
+</html>
