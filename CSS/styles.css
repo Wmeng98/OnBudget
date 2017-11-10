@@ -168,6 +168,7 @@ marquee:hover {
 }
 .pills_inner {
 	width: 250px;
+	height: 60px;
 	border-radius: 10px;
 	color: white;
 	font-weight: bold;
@@ -262,19 +263,21 @@ h6.money {
 			font-size: 10px;
 		}
 }
+/*Special case for log buttons*/
+@media screen and (max-width: 767px) {
+	h6.text-right.money {
+		text-align: center;
+	}
+}
 
 /* sm */
 @media screen and (min-width: 768px) {
     button {
         font-size: 0.9em;
     }
-
-
-
 		.mobile {
 			font-size: 5px;
 		}
-
 }
 
 /* md */
