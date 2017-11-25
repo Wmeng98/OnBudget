@@ -135,13 +135,16 @@ marquee:hover {
 	box-shadow: 5px 5px #990033 inset;
 }
 
-.pills:hover {
-	color: gold;
-}
+
 
 .pills:active {
 	box-shadow: none;
 	border: none;
+	background-color: black;
+}
+
+.pills:hover {
+	color: gold;
 }
 
 .pills:focus {
@@ -179,15 +182,18 @@ marquee:hover {
 	box-shadow: 5px 5px #990033 inset;
 }
 
-.pills_inner:hover {
-	color: gold;
-}
 
 .pills_inner:active {
 	box-shadow: none;
 	background-color: black;
 	border: none;
 }
+
+.pills_inner:hover {
+	color: gold;
+}
+
+
 
 
 .formtext {
@@ -237,6 +243,28 @@ h6.money {
 		}
 		#display {
 					width: 1em;
+		}
+		/* Mobile Workaround*/
+		.pills {
+			border: 1px solid gold;
+		}
+		.pills:active {
+			box-shadow: none;
+			border: none;
+			color: black;
+			background-color: none;
+		}
+
+		.pills:hover {
+			background-color: black;
+			color: black;
+		}
+
+		.pills:focus {
+			background-color: black;
+			color: black;
+			box-shadow: none;
+		}
 		}
 }
 
