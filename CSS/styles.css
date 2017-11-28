@@ -239,9 +239,12 @@ h6.money {
 		#calculator {
 			height: 610px;
 		}
-		.btn {
+		.btn.top-right-fix.stylish.mobile  {
 			font-size: 0.45em !important;
 			background-color: orange;
+		}
+		.btn.top-right-fix.stylish.mobile:hover  {
+			background-color: #990033;
 		}
 
 		/* Mobile Workaround*/
