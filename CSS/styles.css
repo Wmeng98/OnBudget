@@ -24,7 +24,7 @@ body {
 .top-right-fix:hover {
 	background-color: #990033;
 	color: rgb(23, 165, 39);
-	width: 12%;
+	width: 26%;
 }
 
 .addgrey {
@@ -234,16 +234,14 @@ h6.money {
 /* MEDIA QUERIES */
 /* 400 < */
 @media screen and (max-width: 420px) {
-		.mobile {
-			font-size: 0.1em;
-			width: 30%;
+		#calculator {
+			height: 610px;
 		}
-		.mobile:hover {
-			width: 40%;
+		.btn {
+			font-size: 0.45em !important;
+			background-color: orange;
 		}
-		#display {
-					width: 1em;
-		}
+
 		/* Mobile Workaround*/
 		.pills {
 			border: 1px solid gold;
@@ -269,32 +267,38 @@ h6.money {
 }
 
 /**/
-
+@media screen and (max-width: 550px) {
+	#display {
+		width: 50%;
+	}
+}
 
 /* 768 */
 @media screen and (max-width: 767px) {
-		.mobile {
-			font-size: 5px;
-		}
-
 		#calculator {
-			height: 600px;
+			height: 610px;
 		}
 		#display {
-					width: 50%;
+					width: 80%;
 				}
 		.shrink {
 			font-size: 15px;
 		}
 
 		.btn {
-			font-size: 10px;
+			font-size: 0.8em;
+			width: 38%;
 		}
 }
+
+
 /*Special case for log buttons*/
 @media screen and (max-width: 767px) {
 	h6.text-right.money {
 		text-align: center;
+	}
+	#calculator {
+		height: 610px;
 	}
 }
 
@@ -304,7 +308,8 @@ h6.money {
         font-size: 0.9em;
     }
 		.mobile {
-			font-size: 5px;
+			font-size: 6px;
+			width: 20%;
 		}
 }
 
