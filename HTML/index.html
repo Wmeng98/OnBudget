@@ -148,18 +148,34 @@
 
 		<div class="row" style="background-color: rgb(52, 155, 58); font-family: 'Helvetica';">
 			<div class="col-12 h3" style="color: #990033;">
-				<marquee behavior="alternate" class="shrink">Trending personalfinance threads from Reddit</marquee>
+				<div class="horizontally">
+					<span class="shrink marq">Trending personalfinance threads from Reddit</span>
+				</div>
 			</div>
 		</div>
+
+
 	  <div class="row pad" style="background-color: rgb(52, 155, 58); font-family: 'Helvetica';">
 	    <div  class="col-sm-4 h4  reddit">
-				<a id="link1" target="_blank" href=""><marquee class="gold" id=thread1 scrolldelay=100></marquee></a>
+				<a id="link1" target="_blank" href="" title="">
+					<div class="marquee gold">
+						  <span id="thread1" class="marq"></span>
+					</div>
+				</a>
 			</div>
 	    <div class="col-sm-4 h4 reddit">
-				<a id="link2" target="_blank" href=""><marquee class="gold" id=thread2></marquee></a>
+				<a id="link2" target="_blank" href="" title="">
+					<div class="marquee2 gold">
+							<span id="thread2" class="marq"></span>
+					</div>
+				</a>
 			</div>
 	    <div class="col-sm-4 h4 reddit">
-				<a id="link3" target="_blank"  href=""><marquee class="gold" id=thread3 scrolldelay=200></marquee></a>
+				<a id="link3" target="_blank"  href="" title="">
+					<div class="marquee gold">
+						  <span id="thread3" class="marq"></span>
+					</div>
+				</a>
 			</div>
 	  </div>
 	</div>
@@ -279,7 +295,7 @@
 <!--Log Goal: my Info -->
 						<div class="row">
 							<div class="col-sm-12">
-								<button onclick="log()" type="button" class="enclose center-block btn btn-info form">Log My Plan</button>
+								<button id="log" onclick="log()" type="button" class="enclose center-block btn btn-info form">Log My Plan</button>
 							</div>
 						</div>
 					</div>

@@ -5,6 +5,139 @@
 body {
 	background-color: rgb(52, 155, 58);
 }
+/* Horizontal marquee*/
+.horizontally {
+ height: 50px;
+ overflow: hidden;
+ position: relative;
+}
+.horizontally span {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(50%);
+ -webkit-transform:translateX(50%);
+ transform:translateX(50%);
+ /* Apply animation to this element */
+ -moz-animation: horizontally 11s linear infinite alternate;
+ -webkit-animation: horizontally 11s linear infinite alternate;
+ animation: horizontally 11s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes horizontally {
+ 0%   { -moz-transform: translateX(50%); }
+ 100% { -moz-transform: translateX(-50%); }
+}
+@-webkit-keyframes horizontally {
+ 0%   { -webkit-transform: translateX(50%); }
+ 100% { -webkit-transform: translateX(-50%); }
+}
+@keyframes horizontally {
+ 0%   {
+ -moz-transform: translateX(50%); /* Browser bug fix */
+ -webkit-transform: translateX(50%); /* Browser bug fix */
+ transform: translateX(50%);
+ }
+ 100% {
+ -moz-transform: translateX(-50%); /* Browser bug fix */
+ -webkit-transform: translateX(-50%); /* Browser bug fix */
+ transform: translateX(-50%);
+ }
+}
+/* Marquee CSS3 code replica */
+.marquee {
+ height: 30px;
+ overflow: hidden;
+ position: relative;
+}
+.marquee span {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 30px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: marquee 10s linear infinite;
+ -webkit-animation: marquee 10s linear infinite;
+ animation: marquee 10s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes marquee {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes marquee {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes marquee {
+ 0%   {
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%);
+ }
+}
+/*******/
+/* Marquee CSS3 code replica */
+.marquee2 {
+ height: 30px;
+ overflow: hidden;
+ position: relative;
+}
+.marquee2 span {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 30px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: marquee2 8s linear infinite;
+ -webkit-animation: marquee2 8s linear infinite;
+ animation: marquee2 8s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes marquee2 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes marquee2 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes marquee2 {
+ 0%   {
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%);
+ }
+}
+/*******/
+
+
 
 .jumbotron {
 	background-color: #990033;
@@ -90,11 +223,11 @@ body {
 	overflow: hidden;
 }
 
-marquee {
+.marq {
 	padding-top: 2px;
 }
 
-marquee:hover {
+.marq:hover {
 	color: purple;
 }
 
@@ -249,37 +382,41 @@ h6.money {
 		#log {
 			color: lightblue !important;
 		}
-
-		/* Mobile Workaround*/
-		.pills {
-			border: 1px solid gold;
-		}
-		.pills:active {
-			box-shadow: none;
-			border: none;
-			color: black;
-			background-color: none;
-		}
-
-		.pills:hover {
-			background-color: black;
-			color: black;
-		}
-
-		.pills:focus {
-			background-color: black;
-			color: black;
-			box-shadow: none;
-		}
-		}
-}
-
+	}
+/**/
+/**/
+/**/
 /**/
 @media screen and (max-width: 550px) {
 	#display {
 		width: 50%;
 	}
 }
+
+@media screen and (max-width: 690px) {
+	/* Mobile Workaround*/
+	.pills {
+		border: 1px solid gold;
+	}
+	.pills:active {
+		box-shadow: none;
+		border: none;
+		color: black;
+		background-color: none;
+	}
+
+	.pills:hover {
+		background-color: black;
+		color: black;
+	}
+
+	.pills:focus {
+		background-color: black;
+		color: black;
+		box-shadow: none;
+	}
+}
+
 
 /* 768 */
 @media screen and (max-width: 767px) {

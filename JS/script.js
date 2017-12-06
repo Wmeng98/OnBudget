@@ -162,7 +162,10 @@ $(document).ready(function(){
           document.getElementById("thread3").innerHTML = top[2];
 
           $('#link1').attr('href',"https://www.reddit.com" + top_url[0]);
+          $('#link1').attr('title', top[0]);
           $('#link2').attr('href',"https://www.reddit.com" + top_url[1]);
+          $('#link2').attr('title', top[1]);
           $('#link3').attr('href',"https://www.reddit.com" + top_url[2]);
+          $('#link3').attr('title', top[2]);
         })
       });
